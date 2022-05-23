@@ -1,0 +1,26 @@
+.App {
+  text-align: center;
+  background-color: #282c34;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.container{
+  max-width: 600px;
+  margin: 0 auto;
+}
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 2rem;
+}
+
+.filterBox{
+  display: flex;
+  justify-content: space-evenly;
+
+}
