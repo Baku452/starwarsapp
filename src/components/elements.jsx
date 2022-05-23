@@ -1,19 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './index.module.scss';
 
 const Elements = ({data}) => {
+    const [moreData, setMoreData] = useState(false)
     return (  
         <>
-            <div>
-            Count: {data.count}
+            <div className={styles.count}>
+                Count: {data.count}
             </div>
+            <button onClick={()=> setMoreData(!moreData)}>More Data</button>
             <div className={styles.container}>
             {
                 data.count > 0 ? (
                     <ol className={styles.container__list}>
                     {
                         data.results.map( item => (
-                        <li> {item.name}</li>
+                        <li key={item.name}> 
+                        {item.name}
+                            {
+                                moreData ? (
+                            Object.entries(item).map(([key, val]) => (
+                                key !== 'name'? (
+
+                                    <p key={key}>{key}: {val}</p>
+                                ) : null
+                            )
+                            ) ) : null}
+                        </li>
                         ))
                     }
                 </ol>

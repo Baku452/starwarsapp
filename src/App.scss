@@ -20,7 +20,17 @@
 }
 
 .filterBox{
-  display: flex;
-  justify-content: space-evenly;
-
+  display: flex; 
+  justify-content: center;
+  select{
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: 10px;
+  }
+  button{
+    border-radius: 10px;
+    width: 80px;
+    background-color: rgb(29, 29, 29);
+    color: #fff;
+  }
 }

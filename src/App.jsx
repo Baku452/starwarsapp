@@ -26,6 +26,7 @@ function App() {
         Star Wars App
       </header>
       <main className='container'>
+        <h2>Filter using selector and then click Search</h2>
         <div className='filterBox'>
           <select value={filterSelected} onChange={(e)=>setFilerSelected(e.target.value)}>
             <option selected value="people">People</option>
